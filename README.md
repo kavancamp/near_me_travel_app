@@ -1,3 +1,6 @@
+Travel Companion Application using Google Maps.
+Geolocation, Google Maps API, Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, & data filtering.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
