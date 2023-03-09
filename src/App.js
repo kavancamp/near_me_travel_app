@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CssBaseline, Grid } from "@material-ui/core";
 
-import { getPlacesData, getWeatherData } from "./api/travelAdvisorAPI";
+import { getPlacesData, getWeatherData } from "./api/near_me_api.js";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
@@ -32,7 +32,7 @@ const App = () => {
   useEffect(() => {
     const filtered = places.filter((place) => Number(place.rating) > rating);
 
-    setFilteredPlaces(filtered);
+    setFilteredPlaces(filtered); // eslint-disable-next-line
   }, [rating]);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const App = () => {
         setRating("");
         setIsLoading(false);
       });
-    }
+    } // eslint-disable-next-line
   }, [bounds, type]);
 
   const onLoad = (autoC) => setAutocomplete(autoC);
