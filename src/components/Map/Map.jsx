@@ -20,8 +20,16 @@ const Map = ({
 
   return (
     <div className={classes.mapContainer}>
+      {/* <GoogleMapReact
+        bootstrapURLKeys={{ key: API_KEY, libraries: ['places'], id: 'CUSTOM_SCRIPT_ID' }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      />*/}
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+        bootstrapURLKeys={{
+          key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+          libraries: ["places", "geometry", "drawing"],
+        }}
         defaultCenter={coords}
         center={coords}
         defaultZoom={14}
